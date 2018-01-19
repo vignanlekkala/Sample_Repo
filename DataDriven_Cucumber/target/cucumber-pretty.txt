@@ -1,0 +1,15 @@
+Feature: DataDriven Testing
+
+  Scenario Outline: Checking login button functionality [90m# smoke.feature:3[0m
+    [36mGiven [0m[36mopen chrome and start application[0m
+    [36mWhen [0m[36mI enter valid "<username>" and "<password>"[0m
+    [36mThen [0m[36mUser should be loggedin[0m
+    [36mThen [0m[36mApplication should be closed[0m
+
+    Examples: 
+
+  Scenario Outline: Checking login button functionality          [90m# smoke.feature:11[0m
+    [32mGiven [0m[32mopen chrome and start application[0m                      [90m# stepDefination.open_chrome_and_start_application()[0m
+    [32mWhen [0m[32mI enter valid "[0m[32m[1mlekkalavignan@gmail.com[0m[32m" and "[0m[32m[1mpassword1[0m[32m"[0m [90m# stepDefination.I_enter_valid_and(String,String)[0m
+    [32mThen [0m[32mUser should be loggedin[0m                                 [90m# stepDefination.User_should_be_loggedin()[0m
+    [32mThen [0m[32mApplication should be closed[0m                            [90m# stepDefination.Application_should_be_closed()[0m
